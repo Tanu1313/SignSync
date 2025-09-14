@@ -61,9 +61,7 @@
 
 ---
 
-## 🎯 .
-
-📌 Future Improvements
+## 🎯 Future Improvements
 
 Expand dataset to include full ASL/ISL alphabets & words
 
