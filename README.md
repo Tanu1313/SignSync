@@ -5,5 +5,7 @@ SignSync is a real-time sign language detection system that translates hand gest
 # Features
 
 1. Real-Time Gesture Recognition
+   
 Tracks hand gestures using MediaPipe’s 21 hand landmarks in live video.
+
 Processes frames in real-time for accurate gesture recognition.
