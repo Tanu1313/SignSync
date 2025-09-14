@@ -1,59 +1,3 @@
-# SignSync: AI-Powered Sign Language Detector
-
-**SignSync** is a real-time sign language detection system that translates hand gestures into text, bridging communication gaps for individuals with hearing or speech impairments. The project leverages **computer vision**, **machine learning**, and an **interactive web interface** for instant feedback and usability.
-
----
-
-## 🚀 Features
-
-### Real-Time Gesture Recognition
-- Tracks hand gestures using **MediaPipe’s 21 hand landmarks** in live video.  
-- Processes frames in real-time for accurate gesture recognition.
-
-### Webcam-Based Input
-- Captures input using a standard webcam; no additional hardware required.  
-- Continuously monitors hand positions and shapes for detection.
-
-### Machine Learning-Based Classification
-- Uses **RandomForestClassifier** to classify hand gestures from landmarks.  
-- No deep learning (CNN) required—lightweight and fast.
-
-### Text-Only Output
-- Converts recognized gestures into on-screen text.  
-- Provides clear communication without relying on audio.
-
-### Streamlit Web Interface
-- Interactive frontend to view live webcam feed.  
-- Displays detected gestures in real-time with hand landmarks visualization.
-
-### Live Feedback via OpenCV
-- Draws bounding boxes and landmarks on the video feed.  
-- Useful for user guidance and debugging.
-
-### Trainable and Extendable
-- Easily add new gestures by collecting more data.  
-- Model can be retrained and saved using **Pickle**.
-
-### Accessibility-Focused
-- Helps individuals with hearing or speech impairments communicate effectively.  
-- Bridges the gap between signers and non-signers.
-
----
-
-## 🛠️ Tech Stack
-
-**Frontend:** Streamlit (interactive web interface)  
-**Backend:**
-- OpenCV (video capture & processing)  
-- MediaPipe (hand tracking & landmark detection)  
-- NumPy (numerical operations)  
-- scikit-learn RandomForestClassifier (gesture recognition)  
-**Data Storage:** Pickle (saving/loading trained models)  
-**Language:** Python  
-
----
-
-## 📂 Project Structure
 
 # SignSync: AI-Powered Sign Language Detector
 
@@ -109,11 +53,6 @@
 **Language:** Python  
 
 ---
-
-## 📂 Project Structure
-
-
-
 ## 📊 Workflow
 1. **Data Collection** – Capture gesture data using `data_collection.py` → saves dataset as CSV/NumPy arrays.  
 2. **Data Processing** – Clean and preprocess data with `data_processing.py` → generates normalized dataset.  
@@ -122,34 +61,17 @@
 
 ---
 
-## 🎯 Results
-- Accurate recognition of trained gestures in real-time  
-- Demonstrates **Computer Vision + Machine Learning** for accessibility applications  
-- Can be extended into a **Sign-to-Text** or **Sign-to-Speech** system  
+## 🎯 .
 
----
+📌 Future Improvements
 
----
+Expand dataset to include full ASL/ISL alphabets & words
 
-## ⚡ Installation
+Incorporate Deep Learning (CNN/RNN) for higher accuracy
 
-1. **Clone the repository**
-```bash
-git clone https://github.com/yourusername/signsync.git
-cd signsync
-cd signsync
-Create a virtual environment and activate it
-python -m venv venv
-source venv/bin/activate       # On Windows: venv\Scripts\activate
-Install required package
+Add gesture-to-speech output
 
-
-
-## 📌 Future Improvements
-- Expand dataset to include full **ASL/ISL alphabets & words**  
-- Incorporate **Deep Learning (CNN/RNN)** for higher accuracy  
-- Deploy via **Streamlit WebApp**  
-- Add **gesture-to-speech output** for a complete accessibility solution  
+Deploy as a web or mobile application for broader accessibility
 ---
 
 ## 🤝 Acknowledgments
