@@ -1,54 +1,118 @@
-# Sign Language Detection System
+# SignSync: AI-Powered Sign Language Detector
 
-A Python-based real-time gesture recognition system using **Computer Vision** and **Machine Learning** to aid accessibility. This project detects hand gestures and converts them into text in real-time. It can be extended to recognize alphabets, words, or custom gestures.
+**SignSync** is a real-time sign language detection system that translates hand gestures into text, bridging communication gaps for individuals with hearing or speech impairments. The project leverages **computer vision**, **machine learning**, and an **interactive web interface** for instant feedback and usability.
 
 ---
 
 ## 🚀 Features
 
-1. **Real-Time Gesture Recognition**  
-   Tracks hand gestures using **MediaPipe’s hand landmarks** in live video.
+### Real-Time Gesture Recognition
+- Tracks hand gestures using **MediaPipe’s 21 hand landmarks** in live video.  
+- Processes frames in real-time for accurate gesture recognition.
 
-2. **Webcam-Based Input**  
-   Uses a standard webcam for capturing input—no additional hardware required.  
-   Continuously captures frames to identify hand positions and shapes.
+### Webcam-Based Input
+- Captures input using a standard webcam; no additional hardware required.  
+- Continuously monitors hand positions and shapes for detection.
 
-3. **Random Forest Gesture Classification**  
-   Extracts 21 key hand landmark points as feature vectors.  
-   Uses **Random Forest Classifier** from scikit-learn to classify gestures.  
-   No deep learning (CNN) is required, making it lightweight.
+### Machine Learning-Based Classification
+- Uses **RandomForestClassifier** to classify hand gestures from landmarks.  
+- No deep learning (CNN) required—lightweight and fast.
 
-4. **Text-Only Output**  
-   Outputs recognized signs as on-screen text (no audio/speech synthesis).  
-   Helps users understand the translated sign without relying on sound.
+### Text-Only Output
+- Converts recognized gestures into on-screen text.  
+- Provides clear communication without relying on audio.
 
-5. **Streamlit-Based User Interface**  
-   Provides an interactive web interface built using **Streamlit**.  
-   Displays:
-   - Live webcam feed  
-   - Hand detection visualization  
-   - Detected gesture label in real-time
+### Streamlit Web Interface
+- Interactive frontend to view live webcam feed.  
+- Displays detected gestures in real-time with hand landmarks visualization.
 
-6. **Live Feedback via OpenCV**  
-   Draws hand landmarks and bounding boxes over the live video feed.  
-   Useful during debugging and proper hand positioning.
+### Live Feedback via OpenCV
+- Draws bounding boxes and landmarks on the video feed.  
+- Useful for user guidance and debugging.
 
-7. **Trainable and Extendable**  
-   Add more gestures by collecting data and retraining the model.  
-   Supports dataset handling using **NumPy** and **Pandas**.
+### Trainable and Extendable
+- Easily add new gestures by collecting more data.  
+- Model can be retrained and saved using **Pickle**.
 
-8. **Accessibility-Focused**  
-   Aims to bridge communication gaps for individuals with hearing or speech impairments.  
-   Converts gestures into text, aiding interaction with non-signers.
+### Accessibility-Focused
+- Helps individuals with hearing or speech impairments communicate effectively.  
+- Bridges the gap between signers and non-signers.
 
 ---
 
 ## 🛠️ Tech Stack
-- **Programming Language:** Python 3.x  
-- **Libraries:** OpenCV, MediaPipe, NumPy, Pandas, scikit-learn, Streamlit  
-- **Model:** Random Forest Classifier for gesture recognition  
+
+**Frontend:** Streamlit (interactive web interface)  
+**Backend:**
+- OpenCV (video capture & processing)  
+- MediaPipe (hand tracking & landmark detection)  
+- NumPy (numerical operations)  
+- scikit-learn RandomForestClassifier (gesture recognition)  
+**Data Storage:** Pickle (saving/loading trained models)  
+**Language:** Python  
 
 ---
+
+## 📂 Project Structure
+
+# SignSync: AI-Powered Sign Language Detector
+
+**SignSync** is a real-time sign language detection system that translates hand gestures into text, bridging communication gaps for individuals with hearing or speech impairments. The project leverages **computer vision**, **machine learning**, and an **interactive web interface** for instant feedback and usability.
+
+---
+
+## 🚀 Features
+
+### Real-Time Gesture Recognition
+- Tracks hand gestures using **MediaPipe’s 21 hand landmarks** in live video.  
+- Processes frames in real-time for accurate gesture recognition.
+
+### Webcam-Based Input
+- Captures input using a standard webcam; no additional hardware required.  
+- Continuously monitors hand positions and shapes for detection.
+
+### Machine Learning-Based Classification
+- Uses **RandomForestClassifier** to classify hand gestures from landmarks.  
+- No deep learning (CNN) required—lightweight and fast.
+
+### Text-Only Output
+- Converts recognized gestures into on-screen text.  
+- Provides clear communication without relying on audio.
+
+### Streamlit Web Interface
+- Interactive frontend to view live webcam feed.  
+- Displays detected gestures in real-time with hand landmarks visualization.
+
+### Live Feedback via OpenCV
+- Draws bounding boxes and landmarks on the video feed.  
+- Useful for user guidance and debugging.
+
+### Trainable and Extendable
+- Easily add new gestures by collecting more data.  
+- Model can be retrained and saved using **Pickle**.
+
+### Accessibility-Focused
+- Helps individuals with hearing or speech impairments communicate effectively.  
+- Bridges the gap between signers and non-signers.
+
+---
+
+## 🛠️ Tech Stack
+
+**Frontend:** Streamlit (interactive web interface)  
+**Backend:**
+- OpenCV (video capture & processing)  
+- MediaPipe (hand tracking & landmark detection)  
+- NumPy (numerical operations)  
+- scikit-learn RandomForestClassifier (gesture recognition)  
+**Data Storage:** Pickle (saving/loading trained models)  
+**Language:** Python  
+
+---
+
+## 📂 Project Structure
+
+
 
 ## 📊 Workflow
 1. **Data Collection** – Capture gesture data using `data_collection.py` → saves dataset as CSV/NumPy arrays.  
@@ -64,6 +128,22 @@ A Python-based real-time gesture recognition system using **Computer Vision** an
 - Can be extended into a **Sign-to-Text** or **Sign-to-Speech** system  
 
 ---
+
+---
+
+## ⚡ Installation
+
+1. **Clone the repository**
+```bash
+git clone https://github.com/yourusername/signsync.git
+cd signsync
+cd signsync
+Create a virtual environment and activate it
+python -m venv venv
+source venv/bin/activate       # On Windows: venv\Scripts\activate
+Install required package
+
+
 
 ## 📌 Future Improvements
 - Expand dataset to include full **ASL/ISL alphabets & words**  
